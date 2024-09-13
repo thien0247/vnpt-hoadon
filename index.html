@@ -1,1 +1,65 @@
-tesst hiển thị
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Link Portal Hóa đơn VNPT</title>
+</head>
+<body>
+	<div style="text-align:center">
+	<h1>TẠO LINK PORTAL THÔNG TƯ 78</h1>
+    <label for="msdnInput">MSDN:</label>
+    <input type="text" id="msdnInput" placeholder="Nhập MSDN" oninput="generateLink()">
+
+    <button onclick="generateLink()">Tạo Link</button>
+
+    <p id="result"></p>
+	</div>
+    <script>
+        function generateLink() {
+            // Lấy giá trị từ ô văn bản MSDN
+            var msdn = document.getElementById("msdnInput").value;
+
+            // Kiểm tra xem ô văn bản có trống không
+            if (msdn.trim() === "") {
+                alert("Vui lòng nhập MSDN");
+                return;
+            }
+
+            // Sinh ra liên kết và hiển thị kết quả
+            var link = "https://" + msdn + "-tt78cadmin.vnpt-invoice.com.vn";
+            document.getElementById("result").innerHTML = "Link: " + "<a href='"+link+"' target='_blank'>"+link+"<\a>";
+        }
+    </script>
+	
+	
+	<div style="text-align:center">
+	<h1>TẠO LINK PORTAL THÔNG TƯ 32</h1>
+    <label for="msdnInput">MSDN:</label>
+    <input type="text" id="msdnInput2" placeholder="Nhập MSDN" oninput="generateLink2()">
+
+    <button onclick="generateLink2()">Tạo Link</button>
+
+    <p id="result2"></p>
+	</div>
+    <script>
+        function generateLink2() {
+            // Lấy giá trị từ ô văn bản MSDN
+            var msdn = document.getElementById("msdnInput2").value;
+
+            // Kiểm tra xem ô văn bản có trống không
+            if (msdn.trim() === "") {
+                alert("Vui lòng nhập MSDN");
+                return;
+            }
+
+            // Sinh ra liên kết và hiển thị kết quả
+            var link = "https://" + msdn + "-cadmin.vnpt-invoice.com.vn";
+            document.getElementById("result2").innerHTML = "Link: " + "<a href='"+link+"' target='_blank'>"+link+"<\a>";
+        }
+    </script>
+	
+
+</body>
+</html>
